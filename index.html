@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ePortfolio – Nhóm 7 – Đề tài 10: Quản lý Trung tâm Ngoại ngữ (QLTTNN)</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f7f8fa;--card:#fff;--tx:#1d2330;--mu:#5b6475;--ac:#1f5fbf;--bd:#e1e5ec;--ok:#1a7f4b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161d;--card:#1a2029;--tx:#e8ecf3;--mu:#9aa5b8;--ac:#6aa3f5;--bd:#2b3442;--ok:#4cc38a}}
+:root[data-theme="dark"]{--bg:#12161d;--card:#1a2029;--tx:#e8ecf3;--mu:#9aa5b8;--ac:#6aa3f5;--bd:#2b3442;--ok:#4cc38a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 "Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.7rem;margin:.2em 0}h2{font-size:1.25rem;margin:2em 0 .6em;border-bottom:2px solid var(--ac);padding-bottom:.2em}
+h3{font-size:1.02rem;margin:0 0 .3em}
+.mu{color:var(--mu);font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;margin:12px 0}
+.day{border-left:4px solid var(--ac)}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--bd);border-radius:99px;padding:1px 9px;margin:2px 4px 2px 0;color:var(--mu)}
+.ok{color:var(--ok);font-weight:600}
+.w{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{border:1px solid var(--bd);padding:6px 9px;text-align:left;vertical-align:top}th{background:var(--card)}
+ul{margin:.3em 0;padding-left:1.2em}
+</style>
+</head>
+<body>
+<main>
+<p class="mu">Trường Đại học Lạc Hồng · Khoa CNTT · Hệ quản trị CSDL (111170) · Lớp 25CT113 · GV: Phan Mạnh Thường</p>
+<h1>ePortfolio – Nhật ký làm việc nhóm</h1>
+<p><b>Đồ án:</b> Xây dựng CSDL Quản lý Trung tâm Ngoại ngữ (QLTTNN) – Đề tài 10 – Nhóm 7<br>
+<b>Thời gian:</b> 09/10/2026 – 13/11/2026 (hạn nộp cuối) · <b>Công cụ:</b> SQL Server 2014/SSMS, PowerDesigner, Google Docs, Excel (bảng phân công)</p>
+
+<h2>1. Thành viên</h2>
+<div class="w"><table>
+<tr><th>Họ tên</th><th>MSSV</th><th>Vai trò</th><th>Phụ trách chính</th></tr>
+<tr><td>Nguyễn Ngọc Bảo Linh</td><td>125001639</td><td>Nhóm trưởng</td><td>Mô hình CDM/PDM, script tạo CSDL, dữ liệu mẫu, truy vấn Q15–Q20, function, tối ưu, Chương 10–12, đóng gói nộp bài</td></tr>
+<tr><td>Nguyễn Như Ý</td><td>125001303</td><td>Thành viên</td><td>Cài môi trường, phân tích bài toán (Chương 1), ràng buộc R1–R13, trigger, giao tác, slide</td></tr>
+<tr><td>Trần Diễm Quỳnh</td><td>125001478</td><td>Thành viên</td><td>Truy vấn Q1–Q14, sp_CapNhatDiem/sp_ThemLopHoc/sp_KiemTraLichDay, kiểm chứng phân quyền, sao lưu/phục hồi</td></tr>
+<tr><td>Trương Hoàng Bảo Trân</td><td>125001209</td><td>Thành viên</td><td>sp_GhiDanhHocVien, sp_LapPhieuThu, login/user/role và ma trận phân quyền</td></tr>
+</table></div>
+
+<h2>2. Nhật ký theo giai đoạn</h2>
+
+<div class="card day"><h3>09–13/10/2026 · Chuẩn bị</h3>
+<ul><li>Cả nhóm chọn đề tài số 10 và lên ý tưởng (09/10).</li>
+<li>Linh đọc yêu cầu chung và rubric, xác định phạm vi chức năng và danh mục file phải nộp.</li>
+<li>Linh và Ý lập kế hoạch, lập bảng phân công 46 đầu việc, tạo ePortfolio và thư mục chia sẻ.</li></ul>
+<span class="tag">Kết quả: kế hoạch 9 giai đoạn, mốc M1–M3</span></div>
+
+<div class="card day"><h3>12–17/10/2026 · Môi trường và phân tích bài toán</h3>
+<ul><li>Ý cài SQL Server 2014, SSMS, PowerDesigner; cả nhóm thống nhất quy ước đặt tên (mã, bảng, ràng buộc).</li>
+<li>Ý phân tích nghiệp vụ, xác định 4 quy trình chính và 13 quy tắc QT1–QT13, viết Chương 1.</li></ul>
+<span class="tag">Chương 1</span></div>
+
+<div class="card day"><h3>16–26/10/2026 · Thiết kế và mô hình hóa dữ liệu</h3>
+<ul><li>Linh xác định 8 thực thể, thuộc tính, khóa; mối kết hợp N–N có thuộc tính riêng (GHIDANH: NgayGhiDanh, DiemTongKet).</li>
+<li>Vẽ ERD/CDM, sinh PDM trên PowerDesigner, kiểm tra khóa chính, khóa ngoại, kiểu dữ liệu.</li>
+<li>Viết mục 2.3–2.5: lý do chọn bản số, phương án đã cân nhắc, lược đồ quan hệ.</li></ul>
+<span class="tag">QLTTNN_CDM.cdm</span><span class="tag">QLTTNN_PDM.pdm</span><span class="tag">Chương 2</span></div>
+
+<div class="card day"><h3>24/10–04/11/2026 · Cài đặt CSDL và dữ liệu mẫu (Mốc M1)</h3>
+<ul><li>Linh viết script tạo CSDL (.mdf/.ldf) và 9 bảng; Ý bổ sung ràng buộc bằng ALTER TABLE (CHECK, UNIQUE, FK), lập danh mục R1–R13.</li>
+<li>Linh sinh dữ liệu mẫu bằng AI: HOCVIEN (100), CONGNO (1.000), PHIEUTHU (1.000); nhập tay/sinh các bảng danh mục và dòng biên (tuổi GV ≥ 22, ngày lớp, sĩ số).</li>
+<li>Ý chạy thử toàn bộ INSERT trên SSMS, sửa lỗi khóa ngoại, ngày tháng, trùng lặp; thống kê số dòng từng bảng.</li>
+<li>Linh kiểm thử ràng buộc R1–R13 bằng lệnh cố tình vi phạm, ghi nhận lỗi 547/2627.</li></ul>
+<span class="tag">Chương 3–4</span><span class="tag">Nhật ký AI</span></div>
+
+<div class="card day"><h3>30/10–07/11/2026 · Truy vấn T-SQL và View (Mốc M2)</h3>
+<ul><li>Quỳnh viết Q1–Q14 (đơn giản, kết nối có kết ngoài, gom nhóm, truy vấn lồng có câu “tất cả”); Linh chỉnh sửa.</li>
+<li>Linh viết Q15–Q20 (phép toán tập hợp, CTE, ranking functions).</li>
+<li>5 câu NL→SQL (Q7, Q9, Q12, Q13, Q20): lưu lời nhắc, SQL do AI sinh, lỗi phát hiện và bản sửa.</li>
+<li>Tạo 3 view, trong đó vw_ThongTinHocVienCongKhai giới hạn cột để phục vụ phân quyền; chạy và chụp kết quả 20 truy vấn.</li></ul>
+<span class="tag">Chương 5</span></div>
+
+<div class="card day"><h3>01–09/11/2026 · Stored procedure, function, trigger, giao tác</h3>
+<ul><li>Trân viết sp_GhiDanhHocVien, sp_LapPhieuThu (BEGIN TRAN, TRY…CATCH, THROW, OUTPUT); Quỳnh viết sp_CapNhatDiem, sp_ThemLopHoc, sp_KiemTraLichDay.</li>
+<li>Linh viết 3 loại function: fn_CongNo (vô hướng), fn_LichDayGiangVien (inline TVF), fn_DanhSachHocVienTheoLop (multi-statement TVF).</li>
+<li>Ý viết 4 trigger: trg_KiemTraSiSo_MultiInsert, trg_CapNhatSiSo_MultiUpdate, trg_CapNhatCongNo (AFTER) và trg_XoaGiangVien_MultiDelete (INSTEAD OF).</li>
+<li>Ý xây dựng 2 kịch bản giao tác GT1 (ghi danh + công nợ), GT2 (phiếu thu + công nợ), mỗi kịch bản có ca COMMIT và ROLLBACK; kiểm thử thao tác nhiều dòng.</li></ul>
+<span class="tag">Chương 6–7</span></div>
+
+<div class="card day"><h3>05–10/11/2026 · Bảo mật, phân quyền, sao lưu và phục hồi</h3>
+<ul><li>Trân tạo 3 login/user/role (TuVan, KeToan, GiangVien), GRANT/DENY theo quyền tối thiểu, lập ma trận phân quyền; Quỳnh kiểm chứng bằng đăng nhập/EXECUTE AS.</li>
+<li>Quỳnh sao lưu Full, Differential và Log, chọn recovery model, RESTORE sang CSDL mới và đối chiếu dữ liệu.</li>
+<li>Phân tích phương án Log Shipping, RPO/RTO.</li></ul>
+<span class="tag">QLTTNN_Full.bak</span><span class="tag">QLTTNN_Diff.bak</span><span class="tag">QLTTNN_Log.trn</span><span class="tag">Chương 8</span></div>
+
+<div class="card day"><h3>06–10/11/2026 · Tối ưu hiệu năng với AI</h3>
+<ul><li>Linh chọn truy vấn nặng, chụp Execution Plan, đo SET STATISTICS IO/TIME trước và sau khi thêm chỉ mục; nhờ AI đề xuất rồi đánh giá chấp nhận/sửa/bác bỏ.</li>
+<li>Ví dụ trong báo cáo: Q12 giảm logical reads từ 1.850 xuống 24, thời gian từ 252 ms xuống 120 ms, Table Scan chuyển thành Index Seek.</li>
+<li>Ghi chú của nhóm: Q6, Q8 từng chạy trên bảng 10–100 dòng, trong khi rubric yêu cầu bảng ≥ 1.000 dòng (PHIEUTHU/CONGNO).</li></ul>
+<span class="tag">Chương 9</span></div>
+
+<div class="card day"><h3>05–13/11/2026 · Hoàn thiện báo cáo và nộp bài (Mốc M3)</h3>
+<ul><li>Linh viết Chương 10 (nhật ký AI), 11, 12, tài liệu tham khảo, phụ lục; Ý thiết kế slide.</li>
+<li>Gộp và chạy lại toàn bộ script 01–08 trên CSDL mới.</li>
+<li>Cả nhóm rà soát thống nhất tên giữa báo cáo và script (fn_TinhCongNo → fn_CongNo, fn_LichDayGiaoVien → fn_LichDayGiangVien, us_GiaoVien → us_GiangVien, MSSV, tên CSDL).</li>
+<li>Định dạng báo cáo (Times New Roman 13, lề 2 cm, giãn dòng 1,3), xuất .docx và .pdf, tập dượt thuyết trình, đóng gói và nộp ngày 13/11/2026.</li></ul>
+<span class="tag">HQTCSDL_Nhom7_DeTai10</span></div>
+
+<h2>3. Sản phẩm và minh chứng</h2>
+<div class="w"><table>
+<tr><th>Hạng mục</th><th>Số lượng</th><th>Minh chứng</th></tr>
+<tr><td>Bảng (thực thể + GHIDANH)</td><td>9</td><td>QLTTNN_nhom7.sql, .cdm, .pdm</td></tr>
+<tr><td>View</td><td>3</td><td>vw_DanhSachHocVienDangKy, vw_ThongTinLopHoc, vw_ThongTinHocVienCongKhai</td></tr>
+<tr><td>Stored procedure</td><td>5</td><td>sp_GhiDanhHocVien, sp_LapPhieuThu, sp_CapNhatDiem, sp_ThemLopHoc, sp_KiemTraLichDay</td></tr>
+<tr><td>Function</td><td>3</td><td>fn_CongNo, fn_LichDayGiangVien, fn_DanhSachHocVienTheoLop</td></tr>
+<tr><td>Trigger</td><td>4</td><td>3 AFTER + 1 INSTEAD OF</td></tr>
+<tr><td>Login / user / role</td><td>3 / 3 / 3</td><td>TuVan, KeToan, GiangVien (15 lệnh GRANT, 2 lệnh DENY)</td></tr>
+<tr><td>Chỉ mục nonclustered</td><td>10</td><td>script tạo CSDL và tối ưu</td></tr>
+<tr><td>Sao lưu</td><td>Full, Differential, Log</td><td>QLTTNN_Full.bak, QLTTNN_Diff.bak, QLTTNN_Log.trn</td></tr>
+<tr><td>Báo cáo</td><td>107 trang</td><td>HQTCSDL_Nhom7_DeTai10 (.docx/.pdf)</td></tr>
+</table></div>
+
+<h2>4. Tiến độ theo thành viên</h2>
+<p>46 đầu việc, tất cả đạt 100% theo bảng phân công. Số việc phụ trách chính: Linh 26, Ý 9, Quỳnh 6, Trân 2, cả nhóm 3 (chưa tính các việc hỗ trợ).</p>
+
+<h2>5. Nhật ký góp ý và cải tiến</h2>
+<div class="w"><table>
+<tr><th>Vấn đề</th><th>Hướng cải tiến</th><th>Kết quả</th></tr>
+<tr><td>Kiểm tra lại quan hệ giữa các bảng và khóa ngoại</td><td>Rà soát khóa chính, khóa ngoại, điều kiện liên kết</td><td>Cấu trúc dữ liệu phù hợp hơn</td></tr>
+<tr><td>Dữ liệu mẫu phải hợp lệ, không trùng lặp</td><td>Kiểm tra số bản ghi, mã định danh, liên kết</td><td>Dữ liệu được kiểm tra trước khi dùng</td></tr>
+<tr><td>Kiểm thử nhiều trường hợp</td><td>Thêm ca hợp lệ, không hợp lệ và ca lỗi</td><td>Phát hiện và sửa lỗi khi thực thi</td></tr>
+<tr><td>Bảo mật và phân quyền</td><td>Quyền riêng từng vai trò, kiểm tra bằng tài khoản tương ứng</td><td>Hạn chế quyền không cần thiết</td></tr>
+<tr><td>An toàn dữ liệu khi có sự cố</td><td>Thực hiện sao lưu và phục hồi</td><td>Có bản sao lưu để khôi phục</td></tr>
+</table></div>
+
+<h2>6. Tự học mở rộng</h2>
+<p>Giao tác (BEGIN TRAN, COMMIT, ROLLBACK) · Trigger · Phân quyền theo nguyên tắc quyền tối thiểu (CREATE LOGIN/USER, GRANT, DENY, REVOKE) · Backup/Restore · Index (clustered, nonclustered).</p>
+
+<h2>7. Tự đánh giá và bài học</h2>
+<ul>
+<li><b>Chuyên môn:</b> hiểu rõ hơn quy trình phân tích, thiết kế CSDL, vai trò của khóa và ràng buộc, giao tác, và việc kiểm thử thường xuyên để bắt lỗi sớm.</li>
+<li><b>Dùng AI có trách nhiệm:</b> đặt câu hỏi rõ ràng kèm cấu trúc CSDL, không sao chép nguyên văn, luôn chạy thử trên SQL Server, đối chiếu tài liệu chính thức, không đưa dữ liệu cá nhân hay mật khẩu vào lời nhắc.</li>
+<li><b>Làm việc nhóm:</b> chia việc theo khả năng, theo dõi tiến độ bằng bảng phân công, hỗ trợ nhau khi gặp lỗi, tiếp thu góp ý và chỉnh sửa.</li>
+<li><b>Hạn chế:</b> chưa có giao diện người dùng, chưa kiểm thử nhiều người dùng đồng thời, chưa có bảo mật mức dòng và mã hóa; cần cải thiện kỹ năng viết SQL, kiểm thử và tổ chức công việc.</li>
+<li><b>Hướng phát triển:</b> giao diện web/ứng dụng, quản lý điểm danh và kết quả học tập, Row-Level Security, tự động sao lưu bằng SQL Server Agent Job, học phí theo nhiều đợt.</li>
+</ul>
+<p class="mu">Nhật ký được tổng hợp từ bảng phân công công việc, báo cáo cuối kỳ, script SQL, mô hình CDM/PDM và các tệp sao lưu của Nhóm 7.</p>
+</main>
+</body>
+</html>
